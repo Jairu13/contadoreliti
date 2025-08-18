@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contador</title>
+        <style>
+            *{
+                margin: 0px;
+                box-sizing: border-box;
+            }
+            body{
+                min-height: 100vh;
+
+                background-color: rgb(100, 143, 184);
+                display: grid;
+                place-items: center;
+            }
+            section{
+                padding: 20px;
+                background-color: aqua;
+                text-align: center;
+                border-radius: 5px;
+            }
+            p{
+                font-size: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>contador</h1>
+            <p onclick="aumentar()"></p>
+        </section>
+        <script>
+            let numero = 0 
+            function aumentar(){
+                numero = numero + 1
+                render()
+            }
+            function render(){
+                document.querySelector("p").innerHTML = numero
+            }
+            render()
+        </script>
+    </body>
+</html>
